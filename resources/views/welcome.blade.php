@@ -21,9 +21,12 @@
     {{-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700" rel="stylesheet"> --}}
     <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
-     <!-- //web fonts -->
+    <!-- //web fonts -->
+
     <!-- Template CSS -->
   <link rel="stylesheet" href="{{ asset('temp/assets/css/style-starter.css') }}">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
   <style>
     html {
     margin: 40px auto;
@@ -60,10 +63,10 @@
      window.dataLayer = window.dataLayer || [];
      function gtag(){dataLayer.push(arguments);}
      gtag('js', new Date());
- 
+
      gtag('config', 'UA-123142980-3');
    </script>
-   
+
    <!-- Facebook Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -74,11 +77,11 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window,document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1415608895438553'); 
+    fbq('init', '1415608895438553');
     fbq('track', 'PageView');
     </script>
     <noscript>
-    <img height="1" width="1" 
+    <img height="1" width="1"
     src="https://www.facebook.com/tr?id=1415608895438553&ev=PageView
     &noscript=1"/>
     </noscript>
@@ -116,15 +119,15 @@
         <ul class="navbar-nav mr-auto">
         </ul>
         <div class="form-inline">
-          <a href="#" class="help mr-4">@lang('home.our_process')</a>
+          <a href="#" style="pointer-events: none;" class="help mr-4">@lang('home.our_process')</a>
         </div>
 
         <div class="form-inline">
-          <a href="#" class="about mr-4">@lang('home.loan_products')</a>
+          <a href="#" style="pointer-events: none;" class="about mr-4">@lang('home.loan_products')</a>
         </div>
 
         <div class="form-inline">
-        <a href="#" class="faq mr-4">@lang('home.faqs')</a>
+        <a href="#" style="pointer-events: none;" class="faq mr-4">@lang('home.faqs')</a>
         </div>
 
         <div class="form-inline">
@@ -140,7 +143,7 @@
               </div>
           </li>
           </ul>
-      </div>
+        </div>
 
         <div class="form-inline">
           <a href="{{ route('login') }}" class="btn btn-warning sign" style="border-radius: 90px;"><strong style="color:white;">@lang('home.sign_in')</strong></a>
@@ -230,7 +233,7 @@
       <div class="row bottom_grids pt-md-3">
         <div class="col-lg-3 col-md-6 mt-5">
           <div class="s-block">
-            <a href="#blog-single.html" class="d-block p-lg-4 p-3">
+            <a href="#blog-single.html" class="d-block p-lg-4 p-3" style="pointer-events: none;">
             <img src="{{asset('temp/assets/images/s1.png')}}" alt="" class="img-fluid" />
               <h6 class="my-3" style="color:black;">@lang('home.choose_product')</h6>
               <p class="">@lang('home.get_decision_minutes')</p>
@@ -241,7 +244,7 @@
 
         <div class="col-lg-3 col-md-6 mt-5">
           <div class="s-block">
-            <a href="#blog-single.html" class="d-block p-lg-4 p-3">
+            <a href="#blog-single.html" class="d-block p-lg-4 p-3" style="pointer-events: none;">
               <img src="{{asset('temp/assets/images/s2.png')}}" alt="" class="img-fluid" />
               <h6 class="my-3" style="color:black;">@lang('home.compare_products')</h6>
               <p class="">@lang('home.compare_competitive_loan_rates')</p>
@@ -252,7 +255,7 @@
 
         <div class="col-lg-3 col-md-6 mt-5">
           <div class="s-block">
-            <a href="#blog-single.html" class="d-block p-lg-4 p-3">
+            <a href="#blog-single.html" class="d-block p-lg-4 p-3" style="pointer-events: none;">
             <img src="{{asset('temp/assets/images/s3.png')}}" alt="" class="img-fluid" />
             <h6 class="my-3" style="color:black;">@lang('home.make_request')</h6>
             <p class="">@lang('home.easily_apply')</p>
@@ -262,7 +265,7 @@
 
         <div class="col-lg-3 col-md-6 mt-5">
             <div class="s-block">
-              <a href="#blog-single.html" class="d-block p-lg-4 p-3">
+              <a href="#blog-single.html" class="d-block p-lg-4 p-3" style="pointer-events: none;">
                 <img src="{{asset('temp/assets/images/s2.png')}}" alt="" class="img-fluid" />
                 <h6 class="my-3" style="color:black;">@lang('home.track_application')</h6>
                 <p class="">@lang('home.conveniently_track')</p>
@@ -294,10 +297,10 @@
      <div class="container py-md-3">
        <div class="row">
          <div class="col-md-6 features15-col-text">
-           <a href="#url" class="d-flex flex-wrap feature-unit align-items-center">
+           <a href="#url" class="d-flex flex-wrap feature-unit align-items-center" style="pointer-events: none;">
              <div class="col-sm-3">
                <div class="features15-info">
-                 <span class="fa fa-pencil-square-o" aria-hidden="true"></span>
+                 <span class="fa fa-user" aria-hidden="true"></span>
                </div>
              </div>
              <div class="col-sm-9 mt-sm-0 mt-4">
@@ -309,7 +312,7 @@
            </a>
          </div>
          <div class="col-md-6 features15-col-text">
-           <a href="#url" class="d-flex flex-wrap feature-unit align-items-center">
+           <a href="#url" class="d-flex flex-wrap feature-unit align-items-center" style="pointer-events: none;">
              <div class="col-sm-3">
                <div class="features15-info">
                  <span class="fa fa-briefcase" aria-hidden="true"></span>
@@ -324,7 +327,7 @@
            </a>
          </div>
          <div class="col-md-6 features15-col-text">
-           <a href="#url" class="d-flex flex-wrap feature-unit align-items-center">
+           <a href="#url" class="d-flex flex-wrap feature-unit align-items-center" style="pointer-events: none;">
              <div class="col-sm-3">
                <div class="features15-info">
                  <span class="fa fa-home" aria-hidden="true"></span>
@@ -339,7 +342,7 @@
            </a>
          </div>
          <div class="col-md-6 features15-col-text">
-           <a href="#url" class="d-flex flex-wrap feature-unit align-items-center">
+           <a href="#url" class="d-flex flex-wrap feature-unit align-items-center" style="pointer-events: none;">
              <div class="col-sm-3">
                <div class="features15-info">
                  <span class="fa fa-car" aria-hidden="true"></span>
@@ -393,21 +396,21 @@
           <div class="col-lg-4 col-md-6">
             <div class="s-block">
                 <h6 class="my-3" style="color: #2B3483">@lang('home.gen_eral')</h6>
-                <p class=""><a href="" style="color: black">@lang('home.how_make_loan')</a></p>
+                <p class=""><a href="" style="pointer-events: none;" style="color: black">@lang('home.how_make_loan')</a></p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
               <div class="s-block">
                   <h6 class="my-3" style="color: #2B3483">@lang('home.app_lication')</h6>
-                  <p class=""><a href="" style="color: black">@lang('home.what_are_the_procedure')</a></p>
+                  <p class=""><a href="" style="pointer-events: none;" style="color: black">@lang('home.what_are_the_procedure')</a></p>
               </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
               <div class="s-block">
                   <h6 class="my-3" style="color: #2B3483">@lang('home.track_information')</h6>
-                  <p class=""><a href="" style="color: black">@lang('home.all_information_appear')</a></p>
+                  <p class=""><a href="" style="pointer-events: none;" style="color: black">@lang('home.all_information_appear')</a></p>
               </div>
           </div>
       </div>
@@ -423,89 +426,7 @@
 <!-- Subscribe -->
 
       <!-- Footer -->
-      <section class="w3l-market-footer">
-        <footer class="footer-28">
-          <div class="footer-bg-layer">
-            <div class="container py-lg-3">
-              <div class="row footer-top-28">
-                <div class="col-md-6 footer-list-28 mt-5">
-                  <h1 class="footer-title-28"><strong style="color: #2B3483;">MarketPlace</strong><strong style="color: #E58225;">.</strong></h1>
-                </div>
-                <div class="col-md-6">
-                  <div class="row">
-                    <div class="col-md-6 footer-list-28 mt-5">
-                      <h6 class="footer-title-28">@lang('home.quick_links')</h6>
-                      <ul>
-                        <li><a href="#">@lang('home.about_us')</a></li>
-                        <li><a href="#">@lang('home.bl_og')</a></li>
-                        <li><a href="#">@lang('home.cont_act')</a></li>
-                        <li><a href="#">@lang('home.faqs')</a></li>
-                      </ul>
-                    </div>
-
-                    <div class="col-md-6 footer-list-28 mt-5">
-                      <h6 class="footer-title-28">@lang('home.legal_stuff')</h6>
-                      <ul>
-                        <li><a href="#">@lang('home.dis_claimer')</a></li>
-                        <li><a href="#">@lang('home.fina_ncing')</a></li>
-                        <li><a href="#">@lang('home.privacy_policy')</a></li>
-                        @foreach($documentsDatas as $key => $documentsData)
-
-                        @endforeach
-                        <li><a href="{{ Storage::url($documentsData->file_path) }}" target="_blank">@lang('home.terms_and_conditions')</a></li>
-                      </ul>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="midd-footer-28 align-center py-lg-4 py-3 mt-5">
-              <div class="container">
-                <p class="copy-footer-28 text-center"> &copy; 2020 MarketPlace<strong style="color: yellow;">.</strong>@lang('home.all_rights_reserved') <a
-                    href="https://getpesa.co.tz/" target="_blank">GetPesa</a></p>
-              </div>
-            </div>
-          </div>
-        </footer>
-
-        <!-- move top -->
-        <button onclick="topFunction()" id="movetop" title="@lang('home.go_to_top')">
-          &#10548;
-        </button>
-
-        <script>
-          // When the user scrolls down 20px from the top of the document, show the button
-          window.onscroll = function () {
-            scrollFunction()
-          };
-
-          function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-              document.getElementById("movetop").style.display = "block";
-            } else {
-              document.getElementById("movetop").style.display = "none";
-            }
-          }
-
-          // When the user clicks on the button, scroll to the top of the document
-          function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-          }
-        </script>
-
-        <script type = "text/javascript">
-            function getValue() {
-               var retVal = prompt("Enter Language : ", "your name here");
-               document.write("You have entered : " + retVal);
-            }
-      </script>
-
-        <!-- /move top -->
-      </section>
+        @include('partials.anotherfooter')
       <!-- Footer -->
 
       <!-- jQuery, Bootstrap JS -->

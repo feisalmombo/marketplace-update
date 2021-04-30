@@ -16,10 +16,13 @@
 
       <!-- Web Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700" rel="stylesheet">
+       {{-- <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet"> --}}
+       {{-- <link href="//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap" rel="stylesheet"> --}}
        <!-- //web fonts -->
       <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('temp/assets/css/style-starter.css') }}">
 
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
   <style>
     html {
     margin: 40px auto;
@@ -122,15 +125,30 @@
         <ul class="navbar-nav mr-auto">
         </ul>
         <div class="form-inline">
-          <a href="#" class="help mr-4">@lang('home.our_process')</a>
+          <a href="#" class="help mr-4" style="pointer-events: none;">@lang('home.our_process')</a>
         </div>
 
         <div class="form-inline">
-          <a href="#" class="about mr-4">@lang('home.loan_products')</a>
+          <a href="#" class="about mr-4" style="pointer-events: none;">@lang('home.loan_products')</a>
         </div>
 
         <div class="form-inline">
-        <a href="#" class="faq mr-4">@lang('home.faqs')</a>
+        <a href="#" class="faq mr-4" style="pointer-events: none;">@lang('home.faqs')</a>
+        </div>
+
+        <div class="form-inline">
+          <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false" style="color: #4C4D62;">
+                  @lang('home.choose_language')
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item hide-modal" href="locale/sw" data-dismiss="modal"><img src="{{ asset('temp/images/tanzania.png') }}" alt="Tanzania Flag"> Swahili</a>
+                  <a class="dropdown-item" href="locale/en"><img src="{{ asset('temp/images/english.png') }}" alt="English Flag"> English</a>
+              </div>
+          </li>
+          </ul>
         </div>
 
         <div class="form-inline">
@@ -202,7 +220,6 @@
             <div class="container">
                 <div class="col-lg-12">
                     <div class="col-lg-12">
-                      
                         <form action="{{ url('/compare/search/loan') }}" method="POST">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div class="input-group">
@@ -232,7 +249,6 @@
                                     </span>
                                 </div>
                         </form>
-                 
                     </div>
                 </div>
             </div>
@@ -254,7 +270,6 @@
                                     @if(Session::has('data'))
                                     @foreach(Session::get('data') as $key=>$compareloan)
                                     <div class="card-body">
-                                       
                                             <table class="table table-responsive">
                                                 <thead>
                                                     <tr>
@@ -272,7 +287,6 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>{{ $key + 1 }}</td>
-                                                        
                                                         <td>{{ $compareloan['institution_name'] }}
                                                         </td>
                                                         <td>{{ number_format($compareloan['interest_rate']) }}%</td>
@@ -467,6 +481,8 @@
 
 <br>
 <br>
+
+{{--  Download Report Here  --}}
 <div class="container">
     <div class="col-lg-12">
         <div class="panel-body">
@@ -525,13 +541,11 @@
                                         <div class="modal-header">
                                                 <button type="button" class="close"
                                                 data-dismiss="modal">
-                                              
                                             </button>
                                             <h4 class="modal-title" id="myModalLabel">
                                                 <form action="{{url('/compare/search/loan/report/pdf/downloadPdf')}}" method="POST">
                                                     {{ csrf_field() }}
-							                            <input type="text" hidden="hidden" value="{{ json_encode(Session::get('data')) }}" name="tad">
-                                                        
+							                                      <input type="text" hidden="hidden" value="{{ json_encode(Session::get('data')) }}" name="tad">
                                                 </form>
                                                 <p>@lang('searchatwelcome.please_fill_in_your_contact')</p>
                                             </h4>
@@ -543,7 +557,7 @@
                                         <form role="form" action="{{ url('/download/report') }}" method="POST">
 
                                             {{ csrf_field() }}
-							                <input type="text" hidden="hidden" value="{{ json_encode(Session::get('data')) }}" name="tad">
+							                              <input type="text" hidden="hidden" value="{{ json_encode(Session::get('data')) }}" name="tad">
 
                                             <div class="input-group">
                                                 <div class="form-group col-md-12">
@@ -612,19 +626,19 @@
                   <div class="col-md-6 footer-list-28 mt-5">
                     <h6 class="footer-title-28">@lang('home.quick_links')</h6>
                     <ul>
-                      <li><a href="#">@lang('home.about_us')</a></li>
-                      <li><a href="#">@lang('home.bl_og')</a></li>
-                      <li><a href="#">@lang('home.cont_act')</a></li>
-                      <li><a href="#">@lang('home.faqs')</a></li>
+                      <li><a href="#" style="pointer-events: none;">@lang('home.about_us')</a></li>
+                      <li><a href="#" style="pointer-events: none;">@lang('home.bl_og')</a></li>
+                      <li><a href="#" style="pointer-events: none;">@lang('home.cont_act')</a></li>
+                      <li><a href="#" style="pointer-events: none;">@lang('home.faqs')</a></li>
                     </ul>
                   </div>
 
                   <div class="col-md-6 footer-list-28 mt-5">
                     <h6 class="footer-title-28">@lang('home.legal_stuff')</h6>
                     <ul>
-                      <li><a href="#">@lang('home.dis_claimer')</a></li>
-                      <li><a href="#">@lang('home.fina_ncing')</a></li>
-                      <li><a href="#">@lang('home.privacy_policy')</a></li>
+                      <li><a href="#" style="pointer-events: none;">@lang('home.dis_claimer')</a></li>
+                      <li><a href="#" style="pointer-events: none;">@lang('home.fina_ncing')</a></li>
+                      <li><a href="#" style="pointer-events: none;">@lang('home.privacy_policy')</a></li>
                     </ul>
                   </div>
 
@@ -636,7 +650,7 @@
 
           <div class="midd-footer-28 align-center py-lg-4 py-3 mt-5">
             <div class="container">
-              <p class="copy-footer-28 text-center"> &copy; 2020 MarketPlace<strong style="color: yellow;">.</strong>@lang('home.all_rights_reserved') <a
+              <p class="copy-footer-28 text-center"> &copy; {{  date('Y') }} MarketPlace<strong style="color: yellow;">.</strong>@lang('home.all_rights_reserved') <a
                   href="https://getpesa.co.tz/" target="_blank">GetPesa</a></p>
             </div>
           </div>
@@ -709,6 +723,21 @@
 
 <script type="text/javascript">
     .collapse('hide')
+</script>
+
+<script>
+    function removeElement() {
+      document.getElementById("imgbox1").style.display = "none";
+    }
+
+    function changeVisibility() {
+      document.getElementById("imgbox2").style.visibility = "hidden";
+    }
+
+    function resetElement() {
+      document.getElementById("imgbox1").style.display = "block";
+      document.getElementById("imgbox2").style.visibility = "visible";
+    }
 </script>
 
 </body>

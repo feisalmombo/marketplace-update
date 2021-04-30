@@ -154,7 +154,7 @@
                     </div>
                 @endif
 
-                    <br> 
+                    <br>
                     <div class="input-group">
                         <div class="form-group col-md-8">
                             <h4>@lang('applyrequest.personal_information')</h4>
@@ -266,7 +266,7 @@
                         <div class="form-group col-md-4">
                             <select class="form-control" id="status" required="required" name="status">
                                 <option value="">-- @lang('applyrequest.select_option') --</option>
-                                <option value="no" @if (old('status') == "no") {{ 'selected' }} @endif>No</option>              
+                                <option value="no" @if (old('status') == "no") {{ 'selected' }} @endif>No</option>
                                 <option value="yes" @if (old('status') == "yes") {{ 'selected' }} @endif>Yes</option>
                             </select>
                         </div>
