@@ -199,7 +199,7 @@ class ViewUsersController extends Controller
         $cities = DB::table('cities')
             ->select('id', 'city_name')
             ->get();
-            
+
         return view('manageUser.createuser')
         ->with('roles', $role)
         ->with('cities', $cities);

@@ -34,7 +34,7 @@
             <th>Date of Birth</th>
             <th>NIDA Number</th>
             <th>City</th>
-            <th>Other Loan</th>
+            {{-- <th>Other Loan</th> --}}
             <th>Applied Status</th>
             <th>Institution Name</th>
             <th>Institution Type Name</th>
@@ -53,7 +53,7 @@
                     <td class="center">{{ $loanapplieds->date_of_birth }}</td>
                     <td class="center">{{ $loanapplieds->government_id_number }}</td>
                     <td class="center">{{ $loanapplieds->city }}</td>
-                    <td class="center">{{ $loanapplieds->status }} {{ $loanapplieds->institution_name }}</td>
+                    {{-- <td class="center">{{ $loanapplieds->status }} {{ $loanapplieds->institution_name }}</td> --}}
                     <td class="center" style="color:#003663">{{ $loanapplieds->applied_status }}</td>
                     <td class="center">{{ $loanapplieds->institution_name }}</td>
                     <td class="center">{{ $loanapplieds->institution_type_name }}</td>

@@ -8,7 +8,7 @@
         <img src="{{ asset('storage/'.Auth::user()->userphoto_path) }}" alt="Avatar" style="width:32px; height:32px; border-radius:50%">
         @else
         <img src="{{asset('temp/images/img_avatar.png')}}" alt="Default Image" style="width:32px; height:32px; border-radius:50%">
-    @endif 
+    @endif
     @foreach(App\Role::All() as $role)
     @if(Auth::user()->hasRole($role->slug)),
     {{$role->name}}

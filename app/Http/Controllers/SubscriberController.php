@@ -63,11 +63,11 @@ class SubscriberController extends Controller
         $check = Subscriber::where('subscribers_email','=',$request->email)->count();
 
         if($check >= 1)
-            return redirect('/')->with('message','Email Aready Exist');
+            return redirect('/#subscribe')->with('error_message','The email has already been taken.');
         else{
             $subscriber->subscribers_email = $request->email;
             $subscriber->save();
-            return redirect('/')->with('message','You will get all information about product loan through your email');
+            return redirect('/#subscribe')->with('success_message','You will get all information about product loan through your email');
         }
     }
 

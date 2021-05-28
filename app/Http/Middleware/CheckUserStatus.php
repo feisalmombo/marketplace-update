@@ -17,7 +17,7 @@ class CheckUserStatus
     public function handle($request, Closure $next)
     {
         if (Auth::user()) {
-            
+
         return $next($request);
         }
         else{

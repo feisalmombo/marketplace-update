@@ -639,6 +639,7 @@
                       <li><a href="#" style="pointer-events: none;">@lang('home.dis_claimer')</a></li>
                       <li><a href="#" style="pointer-events: none;">@lang('home.fina_ncing')</a></li>
                       <li><a href="#" style="pointer-events: none;">@lang('home.privacy_policy')</a></li>
+                      <li><a href="{{asset('temp/terms_conditions/storage/DocumentsFolder/SdDrq7vEOZ0d47AZpPsrwGWrkDi1OhgjXj6aHzJs.pdf')}}" target="_blank">Terms and Conditions</a></li>
                     </ul>
                   </div>
 
