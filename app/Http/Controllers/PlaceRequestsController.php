@@ -80,7 +80,7 @@ class PlaceRequestsController extends Controller
             'full_name' => 'required',
             'email' => 'required',
             // 'email' => 'required|unique:users,email',
-            'phone_number' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:13',
+            'phone_number' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|max:10',
             'dob' => 'date_format:Y-m-d|before:2002-01-01',
             'id_number' => 'required|unique:users,government_id_number',
             // 'city' => 'required',
@@ -89,7 +89,7 @@ class PlaceRequestsController extends Controller
             'password_confirmation' => 'required|min:6',
             'workplace' => 'required',
             'address' => 'required',
-            'employernumber' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:13',
+            'employernumber' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|max:10',
             'netsalary' => 'required',
             'jobtitle' => 'required',
             'status' => 'required',
@@ -98,9 +98,9 @@ class PlaceRequestsController extends Controller
 
         $check_otp = $request->otp;
         if(empty($check_otp)) {
-            $otpBoth = $this->otpGenerator($request->email, $request->phone_number);
+            $otpBoth = $this->otpGenerator($request->email, strtolower("+255". substr($request->phone_number, 1)));
 
-            $otpWithSms = $this->sendSmswithOtp($request->phone_number);
+            $otpWithSms = $this->sendSmswithOtp(strtolower("+255". substr($request->phone_number, 1)));
 
             if ($otpBoth) {
                 return redirect()->back()->withInput($request->input())->with('msg1', 'Please Enter OTP is sent to your mobile phone');
@@ -130,7 +130,8 @@ class PlaceRequestsController extends Controller
         $borrowersEmail = $request->email;
         $borrowers->full_name = $request->full_name;
         $borrowers->email = $borrowersEmail;
-        $borrowers->phone_number = $request->phone_number;
+        // $borrowers->phone_number = $request->phone_number;
+        $borrowers->phone_number = strtolower("+255". substr($request->phone_number, 1));
         $borrowers->date_of_birth = $request->dob;
         $borrowers->government_id_number = $request->id_number;
         $borrowers->city_id = $citiesData;
@@ -153,7 +154,8 @@ class PlaceRequestsController extends Controller
 
             $employmentDetail->workplace = $request->workplace;
             $employmentDetail->address = $request->address;
-            $employmentDetail->phone_number = $request->employernumber;
+            // $employmentDetail->phone_number = $request->employernumber;
+            $employmentDetail->phone_number = strtolower("+255". substr($request->employernumber, 1));
             $employmentDetail->net_salary = str_replace(',','',$request->netsalary);
             $employmentDetail->job_title = $request->jobtitle;
             $employmentDetail->user_id = $usersId;
@@ -169,7 +171,7 @@ class PlaceRequestsController extends Controller
                Mail::to('feisalmombo29@gmail.com')->send(new ApplyRequest($borrowerName,$borrowerEmail));
                Mail::to($borrowerEmail)->send(new StatusRequest($borrowerName,$borrowerEmail));
 
-               $sendSms = $this->sendSMS($request->phone_number);
+               $sendSms = $this->sendSMS(strtolower("+255". substr($request->phone_number, 1)));
                   return redirect('/login')->with('message', 'Your Application has successfully been submitted. To view you application please sign in.');
             }
         }
@@ -441,7 +443,7 @@ class PlaceRequestsController extends Controller
 
            Mail::to($borrowerEmail)->send(new PendingRequestMail($borrowerName,$borrowerEmail));
 
-           $sendpendingSms = $this->sendPendingSMS($request->phone_number);
+           $sendpendingSms = $this->sendPendingSMS(strtolower("+255". substr($request->phone_number, 1)));
             return redirect()->back()->with('message', 'LoanRequest is successfully added');
         }
 

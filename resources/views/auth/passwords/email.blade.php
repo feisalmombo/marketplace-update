@@ -39,7 +39,7 @@
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                     <div class="form-group">
-                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required placeholder="Email">
+                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required placeholder="e.g: kisenga@gmail.com">
                     </div>
 
                     <button type="submit" class="btn login-form__btn submit w-100" style="background-color:#C64343;">

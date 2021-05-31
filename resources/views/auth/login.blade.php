@@ -51,11 +51,11 @@ Preloader end
 
 
                     <div class="form-group">
-                        <input type="tel" class="form-control {{ $errors->has('phone_number') ? ' is-invalid' : '' }}" name="phone_number" value="{{ old('phone_number') }}" required autofocus placeholder="Phone number" value="{{ old('phone_number') }}">
+                        <input type="tel" class="form-control {{ $errors->has('phone_number') ? ' is-invalid' : '' }}" name="phone_number" value="{{ old('phone_number') }}" required autofocus placeholder="e.g: 0657892300" value="{{ old('phone_number') }}">
                     </div>
 
                     <div class="form-group">
-                        <input type="password" class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" value="{{ old('password') }}" required placeholder="Password" value="{{ old('password') }}">
+                        <input type="password" class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" value="{{ old('password') }}" required placeholder="e.g: Password" value="{{ old('password') }}">
                     </div>
 
                     @if(session()->has('messagelogin'))

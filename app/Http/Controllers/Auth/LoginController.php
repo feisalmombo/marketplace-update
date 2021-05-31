@@ -50,15 +50,15 @@ class LoginController extends Controller
     {
         // Check validation
         $this->validate($request, [
-            'phone_number' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:13',
+            'phone_number' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|max:10',
             'password' => 'required|min:6',
         ]);
 
         $check_otp = $request->otp;
         if(empty($check_otp)) {
-            $otpBoth = $this->otpGenerator($request->phone_number, $request->password);
+            $otpBoth = $this->otpGenerator(strtolower("+255". substr($request->phone_number, 1)), $request->password);
 
-            $otpWithSms = $this->sendSmswithOtp($request->phone_number);
+            $otpWithSms = $this->sendSmswithOtp(strtolower("+255". substr($request->phone_number, 1)));
 
             if ($otpBoth) {
                 return redirect()->back()->withInput($request->input())->with('messagelogin', 'Please enter Login code is sent to your mobile phone');
@@ -68,16 +68,16 @@ class LoginController extends Controller
 
         }
 
-        $check = OTPLogin::where("phone_number", $request->phone_number)->where('otp', $request->otp)->exists();
+        $check = OTPLogin::where("phone_number", strtolower("+255". substr($request->phone_number, 1)))->where('otp', $request->otp)->exists();
 
         if(!$check){
             return redirect()->back()->withInput($request->input())->with('errorlogin', 'Invalid Login code, Please click Sign in to get new Login code');
         }
 
-        OTPLogin::where("phone_number", $request->phone_number)->where('otp', $request->otp)->delete();
+        OTPLogin::where("phone_number", strtolower("+255". substr($request->phone_number, 1)))->where('otp', $request->otp)->delete();
 
         // Get user record
-        $user = \Auth::attempt(array('phone_number' => $request->phone_number, 'password' => $request->password));
+        $user = \Auth::attempt(array('phone_number' => strtolower("+255". substr($request->phone_number, 1)), 'password' => $request->password));
 
         // Check Condition Phone Number. Found or Not
         if (!$user) {

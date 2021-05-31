@@ -176,7 +176,7 @@
                         <div class="input-group">
                             <div class="form-group col-md-4">
                                 <label for="phone_number">@lang('applyrequest.phone_number')</label>
-                                <input type="tel" id='phone_number' name="phone_number" required="required" class="form-control" value="{{ old('phone_number') }}" placeholder="@lang('applyrequest.e_g'): +255684456287">
+                                <input type="tel" id='phone_number' name="phone_number" required="required" class="form-control" value="{{ old('phone_number') }}" placeholder="@lang('applyrequest.e_g'): 0684456287">
                             </div>
 
                             <div class="form-group col-md-4">
@@ -206,12 +206,12 @@
                         <div class="input-group">
                             <div class="form-group col-md-4">
                                 <label for="password">@lang('applyrequest.password')</label>
-                                <input type="password" id='password' name="password" value="{{ old('password') }}" required class="form-control">
+                                <input type="password" id='password' name="password" value="{{ old('password') }}" placeholder="e.g: ******" required class="form-control">
                             </div>
 
                             <div class="form-group col-md-4">
                                 <label for="password_confirmation">@lang('applyrequest.confirm_password')</label>
-                                <input type="password" id='password_confirmation' name="password_confirmation" value="{{ old('password_confirmation') }}" required class="form-control">
+                                <input type="password" id='password_confirmation' name="password_confirmation" value="{{ old('password_confirmation') }}" placeholder="e.g: ******" required class="form-control">
                             </div>
                         </div>
                         <br>
@@ -241,7 +241,7 @@
 
                             <div class="form-group col-md-4">
                                 <label for="employernumber">@lang('applyrequest.phone_number')</label>
-                                <input type="tel" id='employernumber' name="employernumber" required="required" class="form-control" value="{{ old('employernumber') }}" placeholder="@lang('applyrequest.e_g'): +255784908732">
+                                <input type="tel" id='employernumber' name="employernumber" required="required" class="form-control" value="{{ old('employernumber') }}" placeholder="@lang('applyrequest.e_g'): 0784908732">
                             </div>
                         </div>
                         <br>
