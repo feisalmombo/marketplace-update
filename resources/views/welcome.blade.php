@@ -26,7 +26,7 @@
     <!-- Template CSS -->
   <link rel="stylesheet" href="{{ asset('temp/assets/css/style-starter.css') }}">
 
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+  <script src="{{asset('temp/extension/font-awesome/js/all.js')}}"></script>
   <style>
     html {
     margin: 40px auto;
@@ -55,7 +55,7 @@
     }
   </style>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="{{asset('temp/extension/jquery/jquery.min.js')}}"></script>
 
    <!-- Global site tag (gtag.js) - Google Analytics -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123142980-3"></script>

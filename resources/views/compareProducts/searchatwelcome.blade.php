@@ -22,7 +22,8 @@
       <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('temp/assets/css/style-starter.css') }}">
 
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+  <script src="{{asset('temp/extension/font-awesome/js/all.js')}}"></script>
+  
   <style>
     html {
     margin: 40px auto;
@@ -722,9 +723,9 @@
 </script>
 
 
-<script type="text/javascript">
+{{-- <script type="text/javascript">
     .collapse('hide')
-</script>
+</script> --}}
 
 <script>
     function removeElement() {
