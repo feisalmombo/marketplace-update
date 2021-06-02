@@ -15,9 +15,12 @@
       <!-- Favicon icon -->
 
       <!-- Web Fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700" rel="stylesheet">
+       {{-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700" rel="stylesheet">
        <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
-       <link href="//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+       <link href="//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap" rel="stylesheet"> --}}
+
+       <link rel="stylesheet" href="{{ asset('temp/extension/fonts/roboto.css') }}">
+       <link rel="stylesheet" href="{{ asset('temp/extension/fonts/nunito.css') }}">
        <!-- //web fonts -->
       <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('temp/assets/css/style-starter.css') }}">

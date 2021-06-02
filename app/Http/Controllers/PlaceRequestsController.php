@@ -130,7 +130,6 @@ class PlaceRequestsController extends Controller
         $borrowersEmail = $request->email;
         $borrowers->full_name = $request->full_name;
         $borrowers->email = $borrowersEmail;
-        // $borrowers->phone_number = $request->phone_number;
         $borrowers->phone_number = strtolower("+255". substr($request->phone_number, 1));
         $borrowers->date_of_birth = $request->dob;
         $borrowers->government_id_number = $request->id_number;
@@ -154,7 +153,6 @@ class PlaceRequestsController extends Controller
 
             $employmentDetail->workplace = $request->workplace;
             $employmentDetail->address = $request->address;
-            // $employmentDetail->phone_number = $request->employernumber;
             $employmentDetail->phone_number = strtolower("+255". substr($request->employernumber, 1));
             $employmentDetail->net_salary = str_replace(',','',$request->netsalary);
             $employmentDetail->job_title = $request->jobtitle;
