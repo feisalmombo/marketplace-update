@@ -10,7 +10,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/feisalmombo/marketplace-update">
-    <img src="images/logo.png" alt="MarketPlace Logo" width="80" height="80">
+    <img src="images/logo.png" alt="MarketPlace Logo">
   </a>
 
   <h3 align="center">MarketPlace</h3>
