@@ -3,22 +3,16 @@
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="{{asset('temp/images/favicon.png')}}" alt="Logo" width="80" height="80">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://compare.getpesa.co.tz/temp/images/favicon.png">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">MarketPlace</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    MarketPlace is a smarter way to find financial products.Compare loans from multiple providers in one simple search.
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="http://compare.getpesa.co.tz/">View Online Project</a>
   </p>
 </p>
 
