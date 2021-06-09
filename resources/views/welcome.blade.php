@@ -9,8 +9,6 @@
     <meta name="author" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <meta name="facebook-domain-verification" content="n3of6x2sbtk9nefmo8x6nw907nm0at" />
-
     <title>MarketPlace | @lang('home.home_page')</title>
 
     <!-- Favicon icon -->
@@ -18,13 +16,7 @@
     <!-- Favicon icon -->
 
     <!-- Web Fonts -->
-    {{-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700" rel="stylesheet"> --}}
-    {{-- <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet"> --}}
-
     <link rel="stylesheet" href="{{ asset('temp/extension/fonts/roboto.css') }}">
-
-    {{-- <link href="//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap" rel="stylesheet"> --}}
-
     <link rel="stylesheet" href="{{ asset('temp/extension/fonts/nunito.css') }}">
     <!-- //web fonts -->
 
@@ -32,6 +24,7 @@
   <link rel="stylesheet" href="{{ asset('temp/assets/css/style-starter.css') }}">
 
   <script src="{{asset('temp/extension/font-awesome/js/all.js')}}"></script>
+
   <style>
     html {
     margin: 40px auto;
@@ -72,26 +65,6 @@
      gtag('config', 'UA-123142980-3');
    </script>
 
-   <!-- Facebook Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window,document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1415608895438553');
-    fbq('track', 'PageView');
-    </script>
-    <noscript>
-    <img height="1" width="1"
-    src="https://www.facebook.com/tr?id=1415608895438553&ev=PageView
-    &noscript=1"/>
-    </noscript>
-<!-- End Facebook Pixel Code -->
-
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FS4V813D7"></script>
   <script>
@@ -104,7 +77,6 @@
 
    <script type="text/javascript">
     $(document).ready(function(){
-        // $("#modal-id").modal('show');
         $("#modal-id").modal('hide');
     });
    </script>
@@ -123,16 +95,9 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         </ul>
-        <div class="form-inline">
-          <a href="#" style="pointer-events: none;" class="help mr-4">@lang('home.our_process')</a>
-        </div>
 
         <div class="form-inline">
-          <a href="#" style="pointer-events: none;" class="about mr-4">@lang('home.loan_products')</a>
-        </div>
-
-        <div class="form-inline">
-        <a href="#" style="pointer-events: none;" class="faq mr-4">@lang('home.faqs')</a>
+          <a href="{{ url('/compare/search/loan') }}" class="compare mr-4">@lang('home.now')</a>
         </div>
 
         <div class="form-inline">
@@ -386,52 +351,68 @@
 </section>
 <!-- About GetPesa -->
 
-
-
-<!-- FAQS -->
-<div class="w3l-index-block4">
-  <div class="features-bg py-5">
-    <!-- features15 block -->
-    <div class="container py-md-3">
-      <div class="heading text-center mx-auto">
-        <h3 class="head">@lang('home.frequently_asked_questions')</h3>
-        <p class="my-3 head">@lang('home.find_quick_answers')</p>
-      </div>
-      <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="s-block">
-                <h6 class="my-3" style="color: #2B3483">@lang('home.gen_eral')</h6>
-                <p class=""><a href="" style="pointer-events: none;" style="color: black">@lang('home.how_make_loan')</a></p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-              <div class="s-block">
-                  <h6 class="my-3" style="color: #2B3483">@lang('home.app_lication')</h6>
-                  <p class=""><a href="" style="pointer-events: none;" style="color: black">@lang('home.what_are_the_procedure')</a></p>
-              </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-              <div class="s-block">
-                  <h6 class="my-3" style="color: #2B3483">@lang('home.track_information')</h6>
-                  <p class=""><a href="" style="pointer-events: none;" style="color: black">@lang('home.all_information_appear')</a></p>
-              </div>
-          </div>
-      </div>
-    </div>
-
-
-  </div>
-</div>
-<!-- FAQS -->
-
 <!-- Subscribe -->
 @include('partials.subscribe')
 <!-- Subscribe -->
 
       <!-- Footer -->
-        @include('partials.anotherfooter')
+      <section class="w3l-market-footer">
+        <footer class="footer-28">
+          <div class="footer-bg-layer">
+            <div class="container py-lg-3">
+              <div class="row footer-top-28">
+                <div class="col-md-6 footer-list-28 mt-5">
+                  <h1 class="footer-title-28"><strong style="color: #2B3483;">MarketPlace</strong><strong style="color: #E58225;">.</strong></h1>
+                </div>
+
+              </div>
+            </div>
+
+
+            <div class="midd-footer-28 align-center py-lg-4 py-3 mt-5">
+              <div class="container">
+                <p class="copy-footer-28 text-center"> &copy; {{  date('Y') }} MarketPlace<strong style="color: yellow;">.</strong>@lang('home.all_rights_reserved') <a
+                    href="https://getpesa.co.tz/" target="_blank">GetPesa</a></p>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+        <!-- move top -->
+        <button onclick="topFunction()" id="movetop" title="@lang('home.go_to_top')">
+          &#10548;
+        </button>
+
+        <script>
+          // When the user scrolls down 20px from the top of the document, show the button
+          window.onscroll = function () {
+            scrollFunction()
+          };
+
+          function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              document.getElementById("movetop").style.display = "block";
+            } else {
+              document.getElementById("movetop").style.display = "none";
+            }
+          }
+
+          // When the user clicks on the button, scroll to the top of the document
+          function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+          }
+        </script>
+
+        <script type = "text/javascript">
+            function getValue() {
+               var retVal = prompt("Enter Language : ", "your name here");
+               document.write("You have entered : " + retVal);
+            }
+      </script>
+
+        <!-- /move top -->
+      </section>
       <!-- Footer -->
 
       <!-- jQuery, Bootstrap JS -->

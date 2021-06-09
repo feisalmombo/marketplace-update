@@ -16,11 +16,11 @@
 
       <!-- Web Fonts -->
       {{-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700" rel="stylesheet"> --}}
-       {{-- <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet"> --}}
-       {{-- <link href="//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap" rel="stylesheet"> --}}
+    {{-- <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap" rel="stylesheet"> --}}
 
-       <link rel="stylesheet" href="{{ asset('temp/extension/fonts/roboto.css') }}">
-       <link rel="stylesheet" href="{{ asset('temp/extension/fonts/nunito.css') }}">
+    <link rel="stylesheet" href="{{ asset('temp/extension/fonts/roboto.css') }}">
+    <link rel="stylesheet" href="{{ asset('temp/extension/fonts/nunito.css') }}">
        <!-- //web fonts -->
       <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('temp/assets/css/style-starter.css') }}">
@@ -128,16 +128,9 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         </ul>
-        <div class="form-inline">
-          <a href="#" class="help mr-4" style="pointer-events: none;">@lang('home.our_process')</a>
-        </div>
 
         <div class="form-inline">
-          <a href="#" class="about mr-4" style="pointer-events: none;">@lang('home.loan_products')</a>
-        </div>
-
-        <div class="form-inline">
-        <a href="#" class="faq mr-4" style="pointer-events: none;">@lang('home.faqs')</a>
+        <a href="{{ url('/compare/search/loan') }}" class="compare mr-4">@lang('home.now')</a>
         </div>
 
         <div class="form-inline">
@@ -148,8 +141,8 @@
                   @lang('home.choose_language')
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item hide-modal" href="locale/sw" data-dismiss="modal"><img src="{{ asset('temp/images/tanzania.png') }}" alt="Tanzania Flag"> Swahili</a>
-                  <a class="dropdown-item" href="locale/en"><img src="{{ asset('temp/images/english.png') }}" alt="English Flag"> English</a>
+                  <a class="dropdown-item hide-modal" href="/compare/search/loan/locale/sw" data-dismiss="modal"><img src="{{ asset('temp/images/tanzania.png') }}" alt="Tanzania Flag"> Swahili</a>
+                  <a class="dropdown-item" href="/compare/search/loan/locale/en"><img src="{{ asset('temp/images/english.png') }}" alt="English Flag"> English</a>
               </div>
           </li>
           </ul>
@@ -228,7 +221,7 @@
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div class="input-group">
                                     <div class="form-group btn-min-width mr-1 mb-1 btn-xl">
-                                        <select class="form-control"  required="required" name="loantype" style="font-family: Montserrat;">
+                                        <select class="form-control"  required="required" name="loantype">
                                             <option value="e">--@lang('searchatwelcome.select_loan_purpose')--</option>
                                             @foreach($loan_types as $loantype)
                                             <option value="{{ $loantype->id }}">{{ $loantype->loan_name }}</option>
@@ -485,9 +478,8 @@
 
 <br>
 <br>
-
 {{--  Download Report Here  --}}
-<div class="container">
+{{--  <div class="container">
     <div class="col-lg-12">
         <div class="panel-body">
             <div class="container">
@@ -613,7 +605,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>  --}}
 <br>
 
 <!-- Footer -->
@@ -625,30 +617,7 @@
               <div class="col-md-6 footer-list-28 mt-5">
                 <h1 class="footer-title-28"><strong style="color: #2B3483;">MarketPlace</strong><strong style="color: #E58225;">.</strong></h1>
               </div>
-              <div class="col-md-6">
-                <div class="row">
-                  <div class="col-md-6 footer-list-28 mt-5">
-                    <h6 class="footer-title-28">@lang('home.quick_links')</h6>
-                    <ul>
-                      <li><a href="#" style="pointer-events: none;">@lang('home.about_us')</a></li>
-                      <li><a href="#" style="pointer-events: none;">@lang('home.bl_og')</a></li>
-                      <li><a href="#" style="pointer-events: none;">@lang('home.cont_act')</a></li>
-                      <li><a href="#" style="pointer-events: none;">@lang('home.faqs')</a></li>
-                    </ul>
-                  </div>
 
-                  <div class="col-md-6 footer-list-28 mt-5">
-                    <h6 class="footer-title-28">@lang('home.legal_stuff')</h6>
-                    <ul>
-                      <li><a href="#" style="pointer-events: none;">@lang('home.dis_claimer')</a></li>
-                      <li><a href="#" style="pointer-events: none;">@lang('home.fina_ncing')</a></li>
-                      <li><a href="#" style="pointer-events: none;">@lang('home.privacy_policy')</a></li>
-                      <li><a href="{{asset('temp/terms_conditions/storage/DocumentsFolder/SdDrq7vEOZ0d47AZpPsrwGWrkDi1OhgjXj6aHzJs.pdf')}}" target="_blank">Terms and Conditions</a></li>
-                    </ul>
-                  </div>
-
-                </div>
-              </div>
             </div>
           </div>
 
@@ -723,26 +692,6 @@
         function CheckNumeric() {
             return event.keyCode >= 48 && event.keyCode <= 57 || event.keyCode == 46;
         }
-</script>
-
-
-{{-- <script type="text/javascript">
-    .collapse('hide')
-</script> --}}
-
-<script>
-    function removeElement() {
-      document.getElementById("imgbox1").style.display = "none";
-    }
-
-    function changeVisibility() {
-      document.getElementById("imgbox2").style.visibility = "hidden";
-    }
-
-    function resetElement() {
-      document.getElementById("imgbox1").style.display = "block";
-      document.getElementById("imgbox2").style.visibility = "visible";
-    }
 </script>
 
 </body>

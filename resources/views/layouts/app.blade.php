@@ -1,4 +1,4 @@
- <!-- header part -->
+<!-- header part -->
 
 @include('partials.header')
 

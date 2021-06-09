@@ -1,22 +1,18 @@
 @extends('layouts.app')
 
-@section('title', 'Home')
+@section('title', 'Home Page')
 
 @section('content')
 
 <!-- Main content -->
-
-
-
 @if(Auth::user()->hasRole('borrower'))
-
 <section class="content">
   <h1>
       <strong>Tracking Dashboard</strong>
   </h1>
 <div class="row">
   <div class="col-md-3 col-sm-6 col-xs-12">
-  <a href="{{url('/loan/applied')}}">
+  <a href="#">
     <div class="info-box">
       <span class="info-box-icon bg-aqua"><i class="fa fa-address-card"></i></span>
 
@@ -170,7 +166,7 @@ Auth::user()->hasRole('administrator'))
     <div class="col-md-3 col-sm-6 col-xs-12">
     <a href="{{ url('/product/inquries') }}"  style="color: black">
       <div class="info-box">
-        <span class="info-box-icon bg-aqua"><i class="fa fa-hdd-o"></i></span>
+        <span class="info-box-icon bg-aqua"><i class="fa fa-phone"></i></span>
 
         <div class="info-box-content">
             <span class="info-box-text">No of Inquiries</span>
@@ -253,7 +249,7 @@ Auth::user()->hasRole('administrator'))
         <div class="col-md-3 col-sm-6 col-xs-12">
         <a href="#"  style="color: black">
           <div class="info-box">
-            <span class="info-box-icon bg-red"><i class="fa fa-money"></i></span>
+            <span class="info-box-icon bg-red"><i class="fa fa-credit-card"></i></span>
 
             <div class="info-box-content">
               <span class="info-box-text">Average Amount Requested</span>
@@ -271,7 +267,7 @@ Auth::user()->hasRole('administrator'))
         <div class="col-md-3 col-sm-6 col-xs-12">
         <a href="#"  style="color: black">
           <div class="info-box">
-            <span class="info-box-icon bg-green"><i class="fa fa-safari"></i></span>
+            <span class="info-box-icon bg-green"><i class="fa fa-money"></i></span>
 
             <div class="info-box-content">
               <span class="info-box-text">Average Net Salary</span>
@@ -282,7 +278,6 @@ Auth::user()->hasRole('administrator'))
           <!-- /.info-box -->
         </a>
         </div>
-        <!-- /.col -->
         <!-- /.col -->
     </div>
     {{--  Another row  --}}
@@ -447,16 +442,15 @@ Auth::user()->hasRole('administrator'))
                     {!! $systemuserchart->html() !!}
                   </div>
             </div>
-            <!-- /.col -->
-            <!-- /.col -->
           </div>
           <!-- /.row -->
         </div>
         <!-- /.box-body -->
       </div>
       <!-- /.box -->
-
       <!-- /.row -->
+
+      <!-- TABLE: LATEST ORDERS -->
       <!-- /.box -->
     </div>
     <!-- /.col -->
@@ -510,10 +504,9 @@ Auth::user()->hasRole('administrator'))
         </div>
         <!-- /.info-box-content -->
       </div>
-      <!-- /.info-box -->
-      <!-- /.info-box -->
       <!-- /.box -->
 
+      <!-- PRODUCT LIST -->
       <!-- /.box -->
     </div>
     <!-- /.col -->

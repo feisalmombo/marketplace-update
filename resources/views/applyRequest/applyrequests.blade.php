@@ -15,15 +15,17 @@
       <!-- Favicon icon -->
 
       <!-- Web Fonts -->
-       {{-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700" rel="stylesheet">
-       <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
-       <link href="//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap" rel="stylesheet"> --}}
+       {{-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700" rel="stylesheet"> --}}
+    {{-- <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap" rel="stylesheet"> --}}
 
-       <link rel="stylesheet" href="{{ asset('temp/extension/fonts/roboto.css') }}">
-       <link rel="stylesheet" href="{{ asset('temp/extension/fonts/nunito.css') }}">
+    <link rel="stylesheet" href="{{ asset('temp/extension/fonts/roboto.css') }}">
+    <link rel="stylesheet" href="{{ asset('temp/extension/fonts/nunito.css') }}">
        <!-- //web fonts -->
       <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('temp/assets/css/style-starter.css') }}">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+
   <style>
     html {
     margin: 40px auto;
@@ -66,16 +68,24 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         </ul>
+
         <div class="form-inline">
-          <a href="#" class="help mr-4">@lang('home.our_process')</a>
+          <a href="{{ url('/compare/search/loan') }}" class="compare mr-4">@lang('home.now')</a>
         </div>
 
         <div class="form-inline">
-          <a href="#" class="about mr-4">@lang('home.loan_products')</a>
-        </div>
-
-        <div class="form-inline">
-        <a href="#" class="faq mr-4">@lang('home.faqs')</a>
+          <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false" style="color: #4C4D62;">
+                  @lang('home.choose_language')
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item hide-modal" href="/apply/request/{id}/locale/sw" data-dismiss="modal"><img src="{{ asset('temp/images/tanzania.png') }}" alt="Tanzania Flag"> Swahili</a>
+                  <a class="dropdown-item" href="/apply/request/{id}/locale/en"><img src="{{ asset('temp/images/english.png') }}" alt="English Flag"> English</a>
+              </div>
+          </li>
+          </ul>
         </div>
 
         <div class="form-inline">
@@ -179,7 +189,7 @@
                         <div class="input-group">
                             <div class="form-group col-md-4">
                                 <label for="phone_number">@lang('applyrequest.phone_number')</label>
-                                <input type="tel" id='phone_number' name="phone_number" required="required" class="form-control" value="{{ old('phone_number') }}" placeholder="@lang('applyrequest.e_g'): 0684456287">
+                                <input type="tel" id='phone_number' name="phone_number" required="required" class="form-control" value="{{ old('phone_number') }}" placeholder="@lang('applyrequest.e_g'): 0684450000">
                             </div>
 
                             <div class="form-group col-md-4">
@@ -209,12 +219,12 @@
                         <div class="input-group">
                             <div class="form-group col-md-4">
                                 <label for="password">@lang('applyrequest.password')</label>
-                                <input type="password" id='password' name="password" value="{{ old('password') }}" placeholder="e.g: ******" required class="form-control">
+                                <input type="password" id='password' name="password" value="{{ old('password') }}" placeholder="@lang('applyrequest.e_g'): ******" required class="form-control">
                             </div>
 
                             <div class="form-group col-md-4">
                                 <label for="password_confirmation">@lang('applyrequest.confirm_password')</label>
-                                <input type="password" id='password_confirmation' name="password_confirmation" value="{{ old('password_confirmation') }}" placeholder="e.g: ******" required class="form-control">
+                                <input type="password" id='password_confirmation' name="password_confirmation" value="{{ old('password_confirmation') }}" placeholder="@lang('applyrequest.e_g'): ******" required class="form-control">
                             </div>
                         </div>
                         <br>
@@ -311,36 +321,14 @@
               <div class="col-md-6 footer-list-28 mt-5">
                 <h1 class="footer-title-28"><strong style="color: #2B3483;">MarketPlace</strong><strong style="color: #E58225;">.</strong></h1>
               </div>
-              <div class="col-md-6">
-                <div class="row">
-                  <div class="col-md-6 footer-list-28 mt-5">
-                    <h6 class="footer-title-28">@lang('home.quick_links')</h6>
-                    <ul>
-                      <li><a href="#">@lang('home.about_us')</a></li>
-                      <li><a href="#">@lang('home.bl_og')</a></li>
-                      <li><a href="#">@lang('home.cont_act')</a></li>
-                      <li><a href="#">@lang('home.faqs')</a></li>
-                    </ul>
-                  </div>
 
-                  <div class="col-md-6 footer-list-28 mt-5">
-                    <h6 class="footer-title-28">@lang('home.legal_stuff')</h6>
-                    <ul>
-                      <li><a href="#">@lang('home.dis_claimer')</a></li>
-                      <li><a href="#">@lang('home.fina_ncing')</a></li>
-                      <li><a href="#">@lang('home.privacy_policy')</a></li>
-                    </ul>
-                  </div>
-
-                </div>
-              </div>
             </div>
           </div>
 
 
           <div class="midd-footer-28 align-center py-lg-4 py-3 mt-5">
             <div class="container">
-              <p class="copy-footer-28 text-center"> &copy; 2020 MarketPlace<strong style="color: yellow;">.</strong>@lang('home.all_rights_reserved') <a
+              <p class="copy-footer-28 text-center"> &copy; {{  date('Y') }} MarketPlace<strong style="color: yellow;">.</strong>@lang('home.all_rights_reserved') <a
                   href="https://getpesa.co.tz/" target="_blank">GetPesa</a></p>
             </div>
           </div>

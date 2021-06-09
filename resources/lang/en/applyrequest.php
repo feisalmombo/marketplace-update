@@ -2,7 +2,7 @@
 
 return[
     'apply_request'=>'Apply Request',
-    'apply_for_your_comparison'=>'Apply for your comparison Loan',
+    'apply_for_your_comparison'=>'Apply for your <br />comparison Loan',
     'applynow'=>'Apply now.',
     'personal_information'=>'Personal Information Form',
     'information_about_you'=>'Information about you',

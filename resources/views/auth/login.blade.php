@@ -5,14 +5,48 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>@lang('login.sign_in')</title>
+{{-- <title>@lang('login.sign_in')</title> --}}
+<title>MarketPlace | Sign in</title>
+
 <!-- Favicon icon -->
-<link rel="icon" type="image/png" sizes="16x16" href="{{asset('temp/logintemp/images/favicon.png')}}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{asset('temp/images/favicon.png')}}">
+<!-- Favicon icon -->
+
+<!-- Web Fonts -->
+    {{-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700" rel="stylesheet"> --}}
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+<!-- //web fonts -->
+
 <link href="{{asset('temp/logintemp/css/style.css')}}" rel="stylesheet">
 
 <style>
     .move-left {
     width: auto;
+    }
+</style>
+
+<style>
+    .container{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .fixed-header, .fixed-footer{
+        width: 100%;
+        position: fixed;
+        background: #F7F9FD;
+        padding: 10px 0;
+        color: #C64343;
+        text-align: center;
+    }
+    .fixed-header{
+        top: 0;
+    }
+    .fixed-footer{
+        bottom: 0;
+    }
+    .container p{
+        line-height: 200px;
     }
 </style>
 </head>
@@ -33,7 +67,11 @@ Preloader start
 Preloader end
 ********************-->
 
-
+<div class="">
+    <div style="position: absolute;right: 0px">
+        <div id="google_translate_element"></div>
+    </div>
+</div>
 
 
 <div class="login-form-bg h-100">
@@ -43,7 +81,7 @@ Preloader end
     <div class="form-input-content">
         <div class="card login-form mb-0">
             <div class="card-body pt-5">
-            <a class="text-center" href="{{url('/')}}"> <h4><strong style="color:#2B3483">Marketplace</strong><strong style="color:#E58225">.</strong></h4></a>
+            <a class="text-center" href="{{url('/')}}"> <h4><strong style="color:#2B3483">MarketPlace</strong><strong style="color:#E58225">.</strong></h4></a>
             @include('msgs.successlogin')
 
                 <form class="mt-5 mb-5 login-input" method="POST" action="{{ route('login') }}">
@@ -51,7 +89,7 @@ Preloader end
 
 
                     <div class="form-group">
-                        <input type="tel" class="form-control {{ $errors->has('phone_number') ? ' is-invalid' : '' }}" name="phone_number" value="{{ old('phone_number') }}" required autofocus placeholder="e.g: 0657892300" value="{{ old('phone_number') }}">
+                        <input type="tel" class="form-control {{ $errors->has('phone_number') ? ' is-invalid' : '' }}" name="phone_number" value="{{ old('phone_number') }}" required autofocus placeholder="e.g: 0657902167" value="{{ old('phone_number') }}">
                     </div>
 
                     <div class="form-group">
@@ -91,6 +129,9 @@ Preloader end
 </div>
 </div>
 
+<div class="fixed-footer">
+    <div class="container">Copyright &copy; {{ date('Y') }} MARKETPLACE | SIGN IN</div>
+</div>
 
 
 
@@ -102,6 +143,19 @@ Scripts
 <script src="{{asset('temp/logintemp/js/settings.js')}}"></script>
 <script src="{{asset('temp/logintemp/js/gleek.js')}}"></script>
 <script src="{{asset('temp/logintemp/js/styleSwitcher.js')}}"></script>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'sw'
+        }, 'google_translate_element');
+    }
+</script>
+
+<script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
 </body>
 </html>
 

@@ -3,7 +3,9 @@
 return[
     'market_place'=>'Njia ya soko',
     'choose_language'=>'Chagua Lugha',
-    'home_page'=>'Ukurasa wa nyumbani',
+    'home_page'=>'Karibu ukurasa',
+    'welcome'=>'Karibu',
+    'now'=>'Linganisha Sasa',
     'our_process'=>'Mchakato wetu',
     'loan_products'=>'Bidhaa za Mkopo',
     'faqs'=>'Maswali',
