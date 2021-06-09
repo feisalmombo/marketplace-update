@@ -41,7 +41,13 @@
         <li><a href="#built-with">Project Objectives</a></li>
       </ul>
       <ul>
-        <li><a href="#built-with">User Stories</a></li>
+        <li><a href="#built-with">User Stories</a></li>  
+      </ul>
+      <ul>
+        <li><a href="#built-with">User Personas</a></li>
+      </ul>
+       <ul>
+        <li><a href="#built-with">Summary Functions</a></li>
       </ul>
       <ul>
         <li><a href="#built-with">Built With</a></li>
@@ -97,6 +103,15 @@ As an Admin
 3. I need to be able to review loan applications - approve or reject (give reason).
 4. I need to be able to see a summary of the number of applications, type of loans being applied for,the value and volume of the loan applications, top ranking metrics.
 5. I need to be able to easily download user information in PDF or CSV formats.
+
+## User Personas
+1. Existing Borrower - Bank or MFI
+2. New Borrower - Bank or MFI
+
+## Summary Functions
+1. Create Loan Products
+2. Compare Loans
+3. Apply for Loans
 
 ### Built With
 
