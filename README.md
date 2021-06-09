@@ -192,4 +192,4 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [license-url]: https://github.com/feisalmombo/marketplace-update/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/feisal-mombo-332322135/
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/screenshot.jpg
