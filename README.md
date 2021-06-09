@@ -9,8 +9,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://compare.getpesa.co.tz/temp/images/favicon.png">
+  <a href="https://github.com/feisalmombo/marketplace-update">
+    <img src="images/logo.jpg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">MarketPlace</h3>
@@ -18,8 +18,14 @@
   <p align="center">
     MarketPlace is a smarter way to find financial products.Compare loans from multiple providers in one simple search.
     <br />
+    <a href="https://github.com/feisalmombo/marketplace-update"><strong>Explore the docs »</strong></a>
     <br />
-    <a href="http://compare.getpesa.co.tz/">View Online Project</a>
+    <br />
+    <a href="https://compare.getpesa.co.tz">View Demo</a>
+    ·
+    <a href="https://github.com/feisalmombo/marketplace-update/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/feisalmombo/marketplace-update/issues">Request Feature</a>
   </p>
 </p>
 
@@ -184,7 +190,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
 [issues-url]: https://github.com/feisalmombo/marketplace-update/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[license-url]: https://github.com/feisalmombo/marketplace-update/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[linkedin-url]: https://www.linkedin.com/in/feisal-mombo-332322135/
 [product-screenshot]: images/screenshot.png
