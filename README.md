@@ -41,6 +41,9 @@
         <li><a href="#built-with">Project Objectives</a></li>
       </ul>
       <ul>
+        <li><a href="#built-with">User Stories</a></li>
+      </ul>
+      <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -82,12 +85,25 @@ The main benefits to users will be:
 
 The vision of the marketplace is to level the playing ground through open source information leading to fairly priced products which eventually augur well for the borrowers.
 
+## User Stories
+As a User:
+1. I need to be able to compare the prices of different loan products.
+2. I need to be able to apply for loans I am interested in.
+3. I need to be able to track and get notified on the status of my loan.
+
+As an Admin
+1. I need to be able to easily upload loan product information.
+2. I need to be able to view loan comparison searches for different users.
+3. I need to be able to review loan applications - approve or reject (give reason).
+4. I need to be able to see a summary of the number of applications, type of loans being applied for,the value and volume of the loan applications, top ranking metrics.
+5. I need to be able to easily download user information in PDF or CSV formats.
+
 ### Built With
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+* [Laravel](https://laravel.com/docs/5.7)
 
 
 
