@@ -38,6 +38,9 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#built-with">Project Objectives</a></li>
+      </ul>
+      <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -64,6 +67,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://compare.getpesa.co.tz/)
 
+## Project Objectives
 The purpose of this project is to develop a financial marketplace that will allow users to compare and apply for loans from formal financial institutions such as banks and Microfinance Institutions (MFIs).
 
 This project will solve three main problems:
