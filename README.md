@@ -113,14 +113,47 @@ As an Admin
 2. Compare Loans
 3. Apply for Loans
 
-### Built With
+## Built With
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
+### Front End Development
+* [HTML 5]
+* [CSS]
+* [Javascript]
+* [Jquery]
+* [Vue JS]
+
+### Style
 * [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com/docs/5.7)
+* [Customized  template]
+* [Laravel Snippets]
+* [Just In Mind for design system architecture]
+* [Just color picker]
 
+### Back End (Technology)
+* [Laravel PHP Framework](https://laravel.com)
 
+### Database
+* [MySQL]
+* [MySQL Workbench for designing Databases]
+* [Phpmyadmin]
+
+### SMS Package
+* [African’s Talking for sending OTP (One Time Password) SMS and other SMS notifications via message]
+
+### Editor
+* [Microsoft Visual Studio code]
+
+### Deployment (DEV OPS)
+* [AWS (Amazon Web Services)]
+* [PUTTY Configuration]
+* [FileZilla]
+
+### Packages versions
+* [Dompdf - For reading pdf documents 0.8.4]
+* [Maatwebsite/excel 3.1]
+* [PHP 7.1.3]
 
 <!-- GETTING STARTED -->
 ## Getting Started
