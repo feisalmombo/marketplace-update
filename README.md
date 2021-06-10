@@ -222,24 +222,25 @@ You can now access the server at http://localhost:8000
 
 You can use this SDK for either production or sandbox apps. For sandbox, the app username is ALWAYS found in the dashboard via [dashboard](https://account.africastalking.com/auth/login?next=%2F)
 
-    ```php
-    use AfricasTalking\SDK\AfricasTalking;
+```php
+use AfricasTalking\SDK\AfricasTalking;
 
-    $username = 'YOUR_USERNAME'; // use 'sandbox' for development in the test environment
-    $apiKey   = 'YOUR_API_KEY'; // use your sandbox app API key for development in the test environment
-    $AT       = new AfricasTalking($username, $apiKey);
+$username = 'YOUR_USERNAME'; // use 'sandbox' for development in the test environment
+$apiKey   = 'YOUR_API_KEY'; // use your sandbox app API key for development in the test environment
+$AT       = new AfricasTalking($username, $apiKey);
 
-    // Get one of the services
-    $sms      = $AT->sms();
+// Get one of the services
+$sms      = $AT->sms();
 
-    // Use the service
-    $result   = $sms->send([
-        'to'      => '+2XXYYYOOO',
-        'message' => 'Hello World!'
-    ]);
+// Use the service
+$result   = $sms->send([
+    'to'      => '+2XXYYYOOO',
+    'message' => 'Hello World!'
+]);
 
-    print_r($result);
-    ```
+print_r($result);
+```
+
 _For more details, please refer to the [MarketPlace](https://compare.getpesa.co.tz)_
 
 
