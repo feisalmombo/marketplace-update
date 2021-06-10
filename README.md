@@ -56,6 +56,7 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -171,6 +172,12 @@ This section should list any major frameworks that you built your project using.
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
+### Prerequisites
+
+1. Install XAMPP web server
+2. Any Editor (Preferably VS Code or Sublime Text)
+3. Any web browser with latest version
+
 ### Installation
 
 1. Clone the repo
@@ -215,6 +222,36 @@ To get a local copy up and running follow these simple example steps.
     php artisan serve
     ```
 You can now access the server at http://localhost:8000
+
+## Commands used for Laravel Artisan Cache Commands
+1. Clearing Configuration Cache
+    ```sh
+    php artisan config:cache
+    ```
+
+    ```sh
+    php artisan config:clear
+    ```
+2. Route Caching:
+    ```sh
+    php artisan route:clear
+    ```
+
+    ```sh
+    php artisan route:cache
+    ```
+3. Views Caching:
+    ```sh
+    php artisan view:clear
+    ```
+
+    ```sh
+    php artisan view:cache
+    ```
+4. Clearing Composer Cache:
+    ```sh
+    composer dump-autoload
+    ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
