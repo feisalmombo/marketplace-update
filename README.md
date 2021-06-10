@@ -63,6 +63,8 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contributing">Environment variables</a></li>
+    <li><a href="#contributing">Testing API</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
@@ -299,6 +301,29 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin develop`)
 5. Open a Pull Request
 
+## Environment variables
+
+- `.env` - Environment variables can be set in this file
+
+***Note*** : You can quickly set the database information and other variables in this file and have the application fully working.
+
+# Testing API
+
+Run the laravel development server
+
+    php artisan serve
+
+The api can now be accessed at
+
+    http://localhost:8000/api
+
+Request headers
+
+| **Required** 	| **Key**              	| **Value**            	|
+|----------	|------------------	|------------------	|
+| Yes      	| Content-Type     	| application/json 	|
+| Yes      	| X-Requested-With 	| XMLHttpRequest   	|
+| Optional 	| Authorization    	| Token {JWT}      	|
 
 <!-- CONTACT -->
 ## Contact
