@@ -220,9 +220,27 @@ You can now access the server at http://localhost:8000
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+You can use this SDK for either production or sandbox apps. For sandbox, the app username is ALWAYS found in the dashboard via [dashboard](https://account.africastalking.com/auth/login?next=%2F)
+    ```sh
+    use AfricasTalking\SDK\AfricasTalking;
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+    $username = 'YOUR_USERNAME'; // use 'sandbox' for development in the test environment
+    $apiKey   = 'YOUR_API_KEY'; // use your sandbox app API key for development in the test environment
+    $AT       = new AfricasTalking($username, $apiKey);
+
+    // Get one of the services
+    $sms      = $AT->sms();
+
+    // Use the service
+    $result   = $sms->send([
+        'to'      => '+2XXYYYOOO',
+        'message' => 'Hello World!'
+    ]);
+
+    print_r($result);
+    ```
+
+_For more details, please refer to the [MarketPlace](https://compare.getpesa.co.tz)_
 
 
 
@@ -256,9 +274,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Your Name - [@FeisalMombo](https://twitter.com/FeisalMombo) - feisalmombo29@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/feisalmombo/marketplace-update](https://github.com/feisalmombo/marketplace-update)
 
 
 
