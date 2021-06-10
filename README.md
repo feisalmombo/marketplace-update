@@ -153,6 +153,18 @@ This section should list any major frameworks that you built your project using.
 * [Dompdf - For reading pdf documents 0.8.4]
 * [Maatwebsite/excel 3.1]
 * [PHP 7.1.3]
+* [Laravel framework 5.7.*]
+* [Consoletvs/charts 5.*]
+* [africanstalking/africanstalking 2.4]
+
+### Collaboration Tools.
+* [Trello]
+* [Bitbucket]
+* [Github]
+
+### API TESTING
+* [Postman]
+* [Insomnia]
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -164,27 +176,46 @@ To get a local copy up and running follow these simple example steps.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/feisalmombo/marketplace-update.git
    ```
-2. Install composer 
+2. Switch to the repo folder
+    ```sh
+   cd marketplace-update
+   ```
+
+3. Install all the dependencies using composer 
    ```sh
    composer install
    ```
-3. Install NPM packages
+4. Install NPM packages
    ```sh
    npm install
    ```
-4. This SDK provides convenient access to the Africa's Talking via composer
+5. Copy the example env file and make the required configuration changes in the .env file
+    ```sh
+   cp .env.example .env
+   ```
+6. Generate a new application key
+    ```sh
+  php artisan key:generate
+   ```
+7. Before migrate you must comment the PermissionsServiceProvider.php file first
+
+8. Then you can migrate to run the database migrations and seeders (Set the database connection in .env before migrating)
+     ```sh
+  php artisan migrate:refresh --seed
+   ```
+9. Uncomment the PermissionsServiceProvider.php file and save and continue
+
+10. This SDK provides convenient access to the Africa's Talking via composer
     ```sh
    composer require africastalking/africastalking
    ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
+11. Start the local development server
+     ```sh
+   php artisan serve
    ```
-
-
-
+   
 <!-- USAGE EXAMPLES -->
 ## Usage
 
