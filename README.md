@@ -180,8 +180,8 @@ To get a local copy up and running follow these simple example steps.
    ```
 2. Switch to the repo folder
     ```sh
-   cd marketplace-update
-   ```
+    cd marketplace-update
+    ```
 
 3. Install all the dependencies using composer 
    ```sh
@@ -193,29 +193,29 @@ To get a local copy up and running follow these simple example steps.
    ```
 5. Copy the example env file and make the required configuration changes in the .env file
     ```sh
-   cp .env.example .env
-   ```
+    cp .env.example .env
+    ```
 6. Generate a new application key
     ```sh
-  php artisan key:generate
-   ```
+    php artisan key:generate
+    ```
 7. Before migrate you must comment the PermissionsServiceProvider.php file first
 
 8. Then you can migrate to run the database migrations and seeders (Set the database connection in .env before migrating)
-     ```sh
-  php artisan migrate:refresh --seed
-   ```
+    ```sh
+    php artisan migrate:refresh --seed
+    ```
 9. Uncomment the PermissionsServiceProvider.php file and save and continue
 
 10. This SDK provides convenient access to the Africa's Talking via composer
     ```sh
-   composer require africastalking/africastalking
-   ```
+    composer require africastalking/africastalking
+    ```
 11. Start the local development server
-     ```sh
-   php artisan serve
-   ```
-   
+    ```sh
+    php artisan serve
+    ```
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
