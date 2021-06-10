@@ -215,6 +215,7 @@ To get a local copy up and running follow these simple example steps.
     ```sh
     php artisan serve
     ```
+You can now access the server at http://localhost:8000
 
 <!-- USAGE EXAMPLES -->
 ## Usage
