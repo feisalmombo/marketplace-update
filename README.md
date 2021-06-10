@@ -255,6 +255,11 @@ You can now access the server at http://localhost:8000
     composer dump-autoload
     ```
 
+### Relation Database
+This is a sample of database used in our system when you follow the following commands above you migrate the database and seeder and you can get the relation database like this.
+
+[![Relation Database Schema][relation-database]](https://github.com/feisalmombo/marketplace-update)
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -365,3 +370,4 @@ Project Link: [https://github.com/feisalmombo/marketplace-update](https://github
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/feisal-mombo-332322135/
 [product-screenshot]: images/screenshot.PNG
+[relation-database]: images/database_relation.PNG
